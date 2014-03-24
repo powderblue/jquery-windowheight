@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jquery-windowheight</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
+
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="../jquery.windowheight.js"></script>
+	</head>
+
+	<body>
+<script>
+/*globals window, jQuery, document*/
+
+function displayWindowDimensions() {
+    window.alert(String(jQuery.windowWidth()) + ' x ' + String(jQuery.windowHeight()));
+}
+
+displayWindowDimensions();
+
+jQuery(document).ready(function () {
+    jQuery(window).resize(displayWindowDimensions);
+});
+</script>
+	</body>
+</html>
